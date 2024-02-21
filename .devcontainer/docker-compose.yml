@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  workspace:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    environment:
+      PYTHONPATH: /workspace
+    volumes:
+      - ..:/workspace
+    command: sleep infinity
